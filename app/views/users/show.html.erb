@@ -4,7 +4,11 @@
 	<%= @user.name %><h1> 
 	<p><%= @user.favourite_film %></p>
 
+	<section> <%= render 'shared/stats' %>
+	</section>
+
 	<div class="posts">
+		<%= render 'follow_form' if signed_in? %>
 	<% if @user.posts.any? %>
 		<h1>Posts (<% @user.posts.count %>)</h1>
 
