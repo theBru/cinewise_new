@@ -3,3 +3,16 @@
 	<%= gravatar_for @user %>
 	<%= @user.name %><h1> 
 	<p><%= @user.favourite_film %></p>
+
+	<div class="posts">
+	<% if @user.posts.any? %>
+		<h1>Posts (<% @user.posts.count %>)</h1>
+
+		<ul>
+			<%= render @posts %>
+		</ul>
+
+		<%= will_paginate @posts %>
+
+		<% end %>
+	</div>

@@ -5,4 +5,20 @@
 	<p>This is the home page for cinewise</p>
 
 	<!--<-%= link_to "sign up", signup_path, class: "signupButton" %> -->
+	
+	<% if signed_in? %>
+	<section>
+		<%= render 'shared/user_info' %>
+	</section>
+
+	<section>
+		<%= render 'shared/post_form' %>
+	</section>
+
+	<div>
+		<h1>Feed</h1>
+		<%= render 'shared/feed' %>
+	</div>
+
+	<% end %>
 
