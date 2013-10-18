@@ -1,20 +1,48 @@
-<header class="mainHeader">
-	<%= link_to "cinewise", '#', class: "siteTitle" %>
-	<nav class"siteNav">
-	 	<ul>
-	 		<li><%=link_to "about", about_path %></li>
-	 		<li><%=link_to "reviews", '#' %></li>
-	 		<li><%=link_to "features", '#' %></li>
+<script type="text/javascript">
+WebFontConfig = { fontdeck: { id: '37009' } };
 
-	 		<% if signed_in? %>
-	 			<li><%= link_to "users", users_path %></li>
+(function() {
+  var wf = document.createElement('script');
+  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+})();
+</script>
+
+<div class="floatingElement">
+	
+	<header>
+
+		<h1 id="siteTitle"><%= link_to "cinewise", root_path %></h1>
+
+		<nav>
+
+			<ul>
+
+				<li><%=link_to "about", about_path %></li>
+	 			<li><%=link_to "reviews", 'http://www.cinewise.co.uk/reviews' %></li>
+	 			<li><%=link_to "features", 'http://www.cinewise.co.uk/reviews' %></li>
+
+				<% if signed_in? %>
+				<li><%= link_to "users", 		users_path %></li>
 				<li><%= link_to "profile", current_user %></li>
 				<li><%= link_to "settings", edit_user_path(current_user) %></li>
 				<li><%= link_to "sign out", signout_path, method: "delete" %></li>
-			<% else %>
-	 			<li><%=link_to "sign in", signin_path %></li>
+				
+				</li>
+				<% else %>
+				<li><%= link_to "sign in", signin_path %></li>
+				
 
-	 		<% end %>
-	 	</ul>
-	</nav>
-</header>
+				<% end %>
+			</ul>
+
+		</nav> <!-- Site navigation ends -->
+
+	</header> <!-- Page title, login, and search ends -->
+
+</div> <!-- floatingElement div ends -->
+

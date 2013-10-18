@@ -1,0 +1,1629 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/****** Much obliged, Eric! *******/
+
+/***************************************************************/
+
+/****** CUSTOM STYLE STARTS HERE ******/
+
+/** COLORS **/
+
+/** FONTS **/
+/* Paragraph => Oxygen (Google Fonts) */
+
+/* ##############  BODY ############## */
+
+body {
+	font: 1em 'Oxygen', Arial, Helvetica, sans-serif;
+	font-weight: 200;
+	line-height: 1.5em;
+	color: #1a1a1a;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+.floatingElement {
+	display: block;
+	position: fixed;
+	top: 0px;
+	margin: 0 auto;
+	z-index: 100000000;
+	width: 100%;
+	background-color: #fff;
+	border-bottom: 1px solid rgba(103,126,42,0.1);
+	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.1);
+}
+
+/* ############## WELCOME NOTE ############## */
+
+section.welcomeNote {
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+}
+
+@media only screen and (max-width: 300px) {
+	section.welcomeNote {
+		width: 80%;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	section.welcomeNote {
+		width: 80%;
+	}
+}
+
+
+section.welcomeNote h1, {
+	font-size: 5em;
+	line-height: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	color: rgba(103,126,42, 0.9);
+	margin-bottom: 2%;
+}
+
+@media only screen and (max-width: 300px) {
+	section.welcomeNote h1 {
+		font-size: 2em;
+		line-height: 1em;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	section.welcomeNote h1 {
+		font-size: 2.5em;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	section.welcomeNote h1 {
+		font-size: 3em;
+	}
+}
+
+section.welcomeNote h2 {
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+@media only screen and (max-width: 300px) {
+	section.welcomeNote h2 {
+		font-size: 1em;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	section.welcomeNote h2 {
+		font-size: 1.3em;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	section.welcomeNote h2 {
+		font-size: 1.5em;
+	}
+}
+
+section.welcomeNote p {
+	text-align: center;
+	font-size: 2em;
+}
+
+@media only screen and (max-width: 300px) {
+	section.welcomeNote p {
+		font-size: 1.3em;
+	}	
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	section.welcomeNote p {
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	section.welcomeNote p {
+		font-size: 1.5em;
+	}
+}
+section.welcomeNote ul {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.welcomeOptions li {
+	display: inline;
+	margin: 0 4%;
+	border-radius: 10%;
+	padding: 1%;
+	font-size: 1.5em;
+}
+
+@media only screen and (max-width: 300px) {
+	.welcomeOptions li {
+		font-size: 1.3em;
+	}
+}
+
+.welcomeOptions li a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.welcomeOptions li a:first-child {
+	color: #fff;
+}
+
+.welcomeOptions li:first-child {
+	background: rgba(2,121,34,0.8);
+}
+
+.welcomeOptions li:last-child {
+	background: rgba(3,82,101,0.8);
+}
+
+p.welcome {
+	font-size: 0.8em;
+}
+
+p.about {
+	margin-top: 5%;
+}
+
+p.about a {
+	font-size: 0.7em;
+}
+
+/* ############## SIGN UP, SIGN IN FORMS ############### */
+
+section.signUpForm, section.signInForm, section.editForm {
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+}
+
+@media only screen and (max-width: 300px) {
+	section.signUpForm, section.signInForm, section.editForm {
+		width: 75%;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	section.signUpForm, section.signInForm, section.editForm {
+		width: 75%
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	section.signUpForm, section.signInForm, section.editForm {
+		width: 75%;
+	}
+}
+
+h1.signUpNote, h1.signInNote, h1.editNote {
+	font-size: 3em;
+	line-height: 1em;
+	margin-bottom: 3%;
+	text-align: center;
+	font-family: "Grablau Sans Pro Light", 'Trebuchet MS', Arial, sans-serif;
+}
+
+@media only screen and (max-width: 300px) {
+	h1.signUpNote, h1.signInNote, h1.editNote {
+		font-size: 1em;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	h1.signUpNote, h1.signInNote, h1.editNote {
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	h1.signUpNote, h1.signInNote, h1.editNote {
+		font-size: 2em;
+	}
+}
+
+label {
+	font-size: 1.1em;
+	line-height: 2em;
+	font-weight: bolder;
+}
+
+@media only screen and (max-width: 300px) {
+	label {
+		font-size: 0.8em;
+		line-height: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	label {
+		font-size: 0.9em;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	label {
+		font-size: 1em;
+	}
+}
+
+input {
+	width: 98%;
+	height: 3%;
+	border: 1px solid rgba(103,126,42, 0.5);
+	border-radius: 15px;
+	margin-bottom: 2%;
+}
+
+input.button {
+	display: block;
+	text-align: center;
+	margin-top: 3%;
+	width: 100%;
+	cursor: pointer;
+	background: rgba(2,121,34,0.9);
+	color: #fff;
+	border: none;
+}
+
+@media only screen and (max-width: 300px) {
+	input.button {
+		margin-top: 8%;
+		font-size: 1em;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	input.button {
+		margin-top: 8%;
+		font-size: 0.9em;
+	}
+}
+
+input.signIn {
+	background: rgba(3,82,101,0.9);
+}
+
+input.button:active {
+	background: #09c;
+}
+
+textarea:focus, input:focus {
+	border: 1px solid #09c;
+}
+
+textarea, input {
+	font-size: 1.5em;
+	padding: 1%;
+	font-weight: none;
+}
+
+p.error {
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+input.followButton, input.unfollowButton {
+	max-width: 150px;
+	cursor: pointer;
+	max-height: 100px;
+}
+
+input.followButton {
+	background: #09c;
+}
+
+input.unfollowButton {
+	background: #67c6e6;
+}
+
+/* ############## SIGNED-IN HOME VIEW ############### */
+
+section.dashboard {
+	float: left;
+	padding: 0.5%;
+	position: fixed;
+	width: 40%;
+	background: #f1f1f1;
+	border-radius: 10px;
+	max-width: 700px;
+}
+
+@media only screen and (max-width: 300px) {
+	section.dashboard {
+		float: none;
+		margin: 0 auto;
+		display: block;
+		width: 90%;
+		position: static;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	section.dashboard {
+		float: none;
+		position: static;
+		width: 90%;
+		display: block;
+		margin: 0 auto;
+
+	}
+}
+
+.userReviewsFeed {
+	margin-left: 50%;
+	clear: both;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	padding-bottom: 8%;
+}
+
+@media only screen and (max-width: 300px) {
+	.userReviewsFeed {
+		margin: 5% auto;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	.userReviewsFeed {
+		margin: 5% auto;
+	}
+}
+
+.userReviewsFeed > h1 {
+	text-align: right;
+	border-bottom: 3px solid rgba(103,126,42, 0.9);
+	color: rgba(250,38,9, 0.8);
+	font-style: italic;
+	padding-right: 2%;
+}
+
+.pagination {
+	margin-top: 5%;
+}
+
+.homeGravatar {
+	float: left;
+}
+
+@media only screen and (max-width: 300px) {
+	.homeGravatar {
+		float: none;
+		text-align: center;
+	}
+}
+
+.userInfo, .stats {
+	margin-left: 20%;
+}
+
+@media only screen and (max-width: 300px) {
+	.userInfo, .stats {
+		margin: 2% auto;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	.userInfo, .stats {
+		padding-left: 20%;
+	}
+}
+
+@media only screen and (min-width: 801px) and (max-width: 960px) {
+	.userInfo, .stats {
+		padding-left: 15%;
+	}
+}
+
+.userName {
+	font-size: 1.5em;
+	line-height: 1em;
+	padding-bottom: 2%;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	.userName {
+		font-size: 1.3em;
+	}
+}
+
+.userName a {
+	color: rgba(2,121,34,0.9);
+	text-decoration: none;
+}
+
+.userInfo p {
+	display: inline;
+}
+
+.stats a {
+	text-decoration: none;
+	color: rgba(2,121,34,0.9);
+	font-weight: bold;
+}
+
+.stats a:hover {
+	text-decoration: underline;
+}
+
+.postForm {
+	margin-top: 5%;
+}
+
+.postForm p {
+	font-size: 1em;
+	margin-bottom: 2%;
+	font-style: italic;
+	text-align: right;
+	padding-right: 1%;
+}
+
+@media only screen and (max-width: 300px) {
+	.postForm p {
+		font-size: 0.7em;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	.postForm p {
+		font-size: 0.9em;
+	}
+}
+
+.postForm textarea {
+	width: 98%;
+	height: 100%;
+	border: 1px solid rgba(103,126,42, 0.5);
+	border-radius: 15px;
+	margin-bottom: 2%;
+}
+
+/* ############## POST VIEW ############ */
+
+.postView div.reviewContent {
+	display: block;
+	margin: 0 auto;
+	max-width: 960px;
+	border-bottom: 3px solid rgba(103,126,42, 0.5);
+}
+
+@media only screen and (max-width: 300px) {
+	.postView div.reviewContent {
+		width: 90%;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	.postView div.reviewContent {
+		width: 90%;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	.postView div.reviewContent {
+		width: 90%;
+	}
+}
+
+@media only screen and (min-width: 801px) and (max-width: 960px) {
+	.postView div.reviewContent {
+		width: 90%;
+	}
+}
+
+.postView h1 {
+	font-size: 3em;
+	line-height: 1.5em;
+	border-bottom: 3px solid rgba(103,126,42, 0.5);
+}
+
+@media only screen and (max-width: 300px) {
+	.postView h1 {
+		font-size: 1.5em;
+		line-height: 1.2em;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	.postView h1 {
+		font-size: 2em;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	.postView h1 {
+		font-size: 2.5em;
+	}
+}
+
+.postView p {
+	display: block;
+	margin: 0 auto;
+	font-size: 1.8em;
+	line-height: 1.8em;
+	padding-top: 2%;
+	padding-bottom: 5%;
+}
+
+@media only screen and (max-width: 300px) {
+	.postView p {
+		font-size: 1em;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	.postView p {
+		font-size: 1em;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	.postView p {
+		font-size: 1.3em;
+	}
+}
+
+div.postBy {
+	display: block;
+	margin: 0 auto;
+	max-width: 960px;
+	font-size: 0.7em;
+}
+
+div.postBy p {
+	padding-bottom: 1%;
+	line-height: 0.8em;
+}
+
+
+
+
+/* ############## HEADER ############### */
+
+.floatingElement header {
+	margin: 10px auto;
+	max-width: 1500px;
+	width: 100%;
+}
+
+@media only screen and (max-width: 300px) {
+	.floatingElement header {
+		width: 90%;
+	}
+}
+
+header > h1#siteTitle a {
+	font-family: "KingthingsTrypewriterProRegular", Courier, monotype;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 4em;
+	/*margin: 30px auto 0 auto;*/
+	float: left;
+	padding-top: 1%;
+	text-decoration: none;
+	color: rgb(250,38,9);
+}
+
+@media only screen and (max-width: 300px) {
+	header > h1#siteTitle a {
+		font-size: 2em;
+		float: none;
+	}
+}
+
+
+/* ############## NAV BAR ############# */
+
+nav {
+	
+	max-width: 1500px;
+	background: #fff;
+}
+
+nav > ul {
+	text-align: right;
+	float: right;
+	width: 100%;
+	padding-bottom: 1%;
+}
+
+@media only screen and (max-width: 300px) {
+	nav > ul {
+		float: none;
+		text-align: center;
+	}
+}
+
+nav > ul > li {
+	display: inline;
+	margin-right: 1%;
+	border-right: 1px solid #677e2A;
+	padding-right: 1%;
+	font-family: 'Oxygen', Arial, sans-serif;
+}
+
+nav > ul > li:last-child {
+	margin-right: 0;
+	padding-right: none;
+	border-right: none;
+}
+
+nav > ul > li > a {
+	text-decoration: none;
+	font-size: 1em;
+	line-height: 1.8em;
+	color: #1a1a1a;
+}
+
+nav >ul >li > a:hover, nav > ul > li > a:active {
+	border-bottom: 1px solid #677e2A;
+}
+
+/* ########### ARTICLE ########## */
+
+/*article {
+	margin: 8% auto;
+	padding: 20px auto;
+	width: 65%;
+	max-width: 1024px;
+	position: relative;
+	top: 5%;
+}*/
+
+article > header {
+	margin: 5% auto;
+	padding: 0;
+	max-width: auto;
+	width: auto;
+	position: relative;
+}
+
+article  header.articleHeader  h1, article  header.reviewHeader  h1 {
+	font-family: 'Oxygen', Arial, sans-serif;
+	font-size: 2.7em;
+	line-height: 2em;
+	letter-spacing: 2px;
+	font-weight: bolder;
+}
+
+header.reviewHeader span.reviewDesignator {
+	font-size: 0.5em;
+	line-height: 1em;
+}
+
+.articleHeader div, .reviewHeader div {
+	display: block;
+	border-bottom: 2px solid #abbf79;
+}
+
+.shareLinks {
+	float: right;
+	margin-top: -5%;
+}
+
+.shareLinks li {
+	display: inline;
+}
+
+.shareLinks a img {
+	width: auto;
+	height: 40px;
+}
+
+li.googlePlus {
+	display: none;
+	background: url(images/vectors/googleplus.png);
+}
+
+article .secondNav {
+	padding-top: 1%;
+}
+
+article  .secondNav li {
+	display: inline;
+	margin: 3%;
+}
+
+article header ul li a {
+	font-size: 1.5em;
+	color: #000;
+}
+
+article header ul li:first-child {
+	margin-left: 0;
+}
+
+/* ########### INTRO PARA ########### */
+
+article > section.intro {
+	margin: 0 auto;
+	font-size: 1.5em;
+	line-height: 1.8em;
+}
+
+article section.intro h1 {
+	font-size: 1.7em;
+	margin-bottom: 15px;
+}
+
+article > section.intro > ul.listWithinArticle {
+	list-style: disc;
+	margin: 30px -2%;
+}
+
+article > section.intro > ul.listWithinArticle > li {
+	padding-left: 2%;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	padding-bottom: 10px;
+}
+
+article > section.intro > h2 {
+	margin-top: 20px;
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+
+article > section.intro > p > b {
+	font-weight: bolder;
+}
+
+article p a {
+	color: #1a1a1a;
+}
+
+/* ############# LIST ENTRY ############## */
+
+
+section.listEntry {
+	padding-bottom: 150px;
+	max-width: 1024px;
+	display: block;
+	margin: 0 auto;
+}
+
+section.listEntry > img {
+	display: block;
+	margin: 3% auto;
+	padding: 0 auto;
+	width: 75%;
+	height: auto;
+	float: right;
+}
+
+section.listEntry h1 {
+	font-size: 2em;
+	margin-bottom: 3%;
+}
+
+section.listEntry p {
+	font-size: 1.5em;
+	line-height: 1.8em;
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+.credits {
+	font-family: "Grablau Sans Pro Light", 'Trebuchet MS', Arial, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.2em;
+	margin: 6% 3% 3% auto;
+	display: block;
+}
+
+.credits b {
+	font-weight: bold;
+}
+
+.credits li {
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	width: 25%;
+}
+
+.credits li li {
+	width: 100%;
+}
+
+.credits ul li {
+	padding-bottom: 3px;
+}
+
+.credits a {
+	color: #1a1a1a;
+	font-size: 0.9em;
+}
+
+.credits img {
+	border: 1px solid #d1d1d1;
+	width: auto;
+	height: 20px;
+}
+
+.credits a img.externalLink {
+	text-decoration: none;
+	border: none;
+	width: 0.9em;
+	height: auto;
+}
+
+/* ############ Review style ############# */
+
+article.review {
+	width: 100%;
+	max-width: 1500px;
+	display: block;
+	margin: 5% auto;
+}
+
+section.filmIdTag {
+	float: left;
+	padding-right: 5%;
+	padding-left: 0.5%;
+	position: fixed;
+	max-width: 30%;
+}
+
+section.filmIdTag ul {
+	padding: 1% 5% 3% 0;
+	max-width: 60%;
+	display: block;
+}
+
+section.filmIdTag li {
+	font-family: "Grablau Sans Pro Light", 'Trebuchet MS', Arial, sans-serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+}
+
+section.filmIdTag li:last-child {
+	padding-top: 1%;
+}
+
+section.filmIdTag ul b {
+	font-weight: bold;
+}
+
+section.filmIdTag img.poster {
+	width: 50%;
+	max-width: 320px;
+	height: auto;
+	z-index: 1;
+}
+
+section.filmIdTag img.flag {
+	width: auto;
+	height: 20px;
+	border: 1px solid #ddd;
+}
+
+.filmIdTag > figure {
+	margin: 0 auto;
+	position: relative;
+}
+
+.filmIdTag figure > div {
+	overflow: hidden;
+    color: #fff;
+}
+
+.filmIdTag figure img.poster {
+	max-width: 100%;
+	position: relative;
+	backface-visibility: hidden;
+	transition: transform 1s;
+	-webkit-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+}
+
+.filmIdTag figure:hover img.poster {
+	backface-visibility: hidden;
+	transform: translateY(-12%);
+	-webkit-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transition: transform 1.5s ease-in-out;
+	-webkit-transition: transform 1.5s ease-in-out;
+	-o-transition: transform 1.5s ease-in-out;
+}
+
+.filmIdTag figcaption {
+	position: absolute;
+	top: 90%;
+	left: 1%;
+	color: #000;
+	height: auto;
+	width: 100%;
+    opacity: 1;
+}
+
+.filmIdTag figcaption ul {
+	margin: -1%;
+	padding: 1%;
+	position: relative;
+	top: 72%;
+	left:0;
+}
+
+.filmIdTag figcaption li {
+	display: inline-block;
+	padding-right: 3%;
+}
+
+.filmIdTag figcaption li a {
+	border-radius: 2px;
+	color: #000;
+	font-family: "Grablau Sans Pro Light", 'Trebuchet MS', Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.8em;
+	text-decoration: none
+}
+
+.filmIdTag figcaption li a.trailer {
+	background: rgba(71,82,90, 0.2);
+}
+
+.filmIdTag figcaption li a.imdb {
+	background: rgba(245,222,8, 0.6);
+}
+
+.filmIdTag figcaption p a:hover {
+	text-align: center;
+	text-decoration: none;
+	border-bottom: none;
+	transition: all 2s ease-in-out;
+}
+
+.filmIdTag figure:hover figcaption {
+	opacity: 1;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+.filmIdTag a img.externalLink {
+	text-decoration: none;
+	border: none;
+	width: 0.9em;
+	height: auto;
+	display: inline;
+}
+
+article div.scroll {
+	margin-top: 10%;
+	background-color: none;
+	overflow: hidden;
+}
+
+div section.reviewText {
+	position: relative;
+	z-index: 2;
+	width: 70%;
+	display: block;
+	margin-left: 30%;
+	clear: both;
+	font-size: 1.5em;
+	line-height: 1.8em;
+	padding-bottom: 10%;
+}
+
+div section.reviewText p.inShort {
+	margin-top: 2%;
+	width: auto;
+	font-size: 0.8em;
+	padding-left: 0.5%;
+	margin-left: -1%;
+	background-color: rgba(71,82,90, 0.2);
+	border-left: 5px solid rgba(250,38,9, 0.9);
+	display: block;
+	letter-spacing: 0.1em;
+}
+
+p.inShort strong {
+	font-style: italic;
+	font-weight: bold;
+}
+
+div section.reviewText p {
+	padding: 0 5% 0 0;
+	display: block;
+	margin: auto;
+	margin-bottom: 2%;
+}
+
+div section.reviewText h1 {
+	text-align: right;
+	border-bottom: 3px solid rgba(103,126,42, 0.9);
+	font-size: 2em;
+	line-height: 1.5em;
+	color: rgba(250,38,9, 0.8);
+	font-style: italic;
+	padding-right: 2%;
+}
+
+.reviewImage {
+	margin: 0 auto;
+	position: relative;
+	perspective: 1700px;
+	-webkit-perspective: 1700px;
+	-o-perspective: 1700px;
+	perspective-origin: 0 50%;
+	-webkit-perspective-origin: 0 50%;
+	-o-perspective-origin: 0 50%;
+	padding-bottom: 5%;
+	padding-top: 3%;
+}
+
+.reviewImage figure {
+	margin: 0;
+	position: relative;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+}
+
+.reviewImage figure > div {
+	overflow: hidden;
+    color: #fff;
+}
+
+.reviewImage figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+	transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+}
+
+.reviewImage figure:hover img {
+	transform: translateX(25%);
+	-webkit-transform: translateX(25%);
+	-o-transform: translateX(25%);
+}
+
+.reviewImage figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(71,82,90, 0.2);
+	color: #ed4e6e;
+	height: 100%;
+    width: 25%;
+    opacity: 0;
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+    -o-transform: rotateY(-90deg);
+    transition: transform 1s, opacity 0.1s 0.3s;
+    -webkit-transition: transform 1s, opacity 0.1s 0.3s;
+    -o-transition: transform 1s, opacity 0.1s 0.3s;
+}
+
+@media only screen and (max-width: 300px) {
+	.reviewImage figcaption {
+		display: none;
+	}
+}
+
+.reviewImage figcaption p {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 15%;
+	left: 3%;
+	color: #000;
+	font-family: "Grablau Sans Pro Light", 'Trebuchet MS', Arial, sans-serif;
+	font-size: 0.7em;
+	line-height: 1.8em;
+}
+
+.reviewImage figure:hover figcaption {
+	opacity: 1;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+@media only screen and (max-width: 300px) {
+	.reviewImage figure:hover figcaption {
+		transform: none;
+		-webkit-transform: none;
+		-o-transform: none;
+		transition: none;
+		-webkit-transition: none;
+		-o-transition: none;
+	}
+}
+
+.reviewImage ul.reviewSocial {
+	margin-top: 5%;
+	display: inline;
+}
+
+ul.reviewSocial li {
+	display: inline;
+	padding-right: 5%;
+}
+
+/* ############## Film, Actor, Writer, Director style ########*/
+
+p span.director, p span.writer, p span.filmTitle, p span.actor {
+	font-weight: bolder;
+	font-style: none;
+}
+
+span.filmTitle {
+	font-weight: bolder;
+}
+
+/* ############# Homepage tiles ################ */
+
+article.homeTiles {
+	margin: 8% auto;
+	padding: 20px auto;
+	width: 100%;
+	max-width: 1500px;
+	position: relative;
+	top: 5%;
+	display: block;
+}
+
+@media only screen and (max-width: 300px) {
+	article.homeTiles {
+		padding-top: 75px;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+	article.homeTiles {
+		padding-top: 50px;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	article.homeTiles {
+		padding-top: 50px;
+	}
+}
+
+article.homeTiles > div {
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+section.tile {
+	width: 48%;
+	position: relative;
+	display: inline;
+	float: left;
+	padding: 1%;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 300px){
+	section.tile {
+		width: 98%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	section.tile {
+		width: 98%;
+	}
+}
+
+section.tile h1.tileTitle a {
+	margin: 0;
+	padding: 0;
+	color: #035265;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	font-weight: bolder;
+	text-decoration: none;
+	z-index: 100000000;
+}
+
+.tile:first-child {
+	z-index: 11;
+}
+
+.tile:nth-child(2) {
+	z-index: 10;
+}
+
+.tile:nth-child(3) {
+	z-index: 9;
+}
+
+.tile:nth-child(4) {
+	z-index: 8;
+}
+
+.tile:nth-child(5) {
+	z-index: 7;
+}
+
+.tile:nth-child(6) {
+	z-index: 6;
+}
+
+.tile:nth-child(7) {
+	z-index: 5;
+}
+
+.tile:nth-child(8) {
+	z-index: 4;
+}
+
+.tile:nth-child(9) {
+	z-index: 3;
+}
+
+.tile:nth-child(10) {
+	z-index: 2;
+}
+
+.tile:nth-child(11) {
+	z-index: 1;
+}
+
+.tile div {
+	margin: 5% 0 0 0;
+	position: relative;
+	padding: 2%;
+	border: 1px solid rgba(71,82,90, 0.3);
+	border-radius: 10px;
+}
+
+/*.tile figure img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	position: relative;
+	z-index: 15;
+}*/
+
+/*.tile div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(71,82,90, 0.1);
+	color: #1a1a1a;
+	width: 100%;
+	height: 0;
+    opacity: 1;
+    backface-visibility: hidden;
+    box-shadow: 0 0 0 0px rgba(71,82,90, 0.1);
+    transition: opacity 0.3s, height 0.3s, box-shadow 0.3s;
+    -webkit-transition: opacity 0.3s, height 0.3s, box-shadow 0.3s
+}*/
+
+.tile a {
+	text-decoration: none;
+	color: #035265;
+}
+
+.tile h1 {
+	margin: 0;
+	padding: 0;
+	color: #035265;
+	font-size: 1em;
+	line-height: 1.2em;
+}
+
+/*.tile p.tileBlurb {
+	font-size: 0.9em;
+	line-height: 1.1em;
+}*/
+
+.tile a.readButton {
+	text-align: center;
+	display: inline-block;
+	color: #677e2A;
+	text-decoration: none;
+	font-size: 0.7em;
+	/*position: absolute;
+    bottom: -25%;
+    right: 10px;*/
+}
+
+.tile a.deleteButton {
+	text-align: center;
+	display: inline-block;
+	padding-left: 12%;
+	color: rgba(250,38,9, 0.7);
+	text-decoration: none;
+	font-size: 0.7em;
+}
+
+/*.tile figure:hover div {
+	opacity: 1;
+    height: 100%;
+    box-shadow: 0 0 0 10px rgba(71,82,90, 0.1);
+    z-index: -1;
+}*/
+
+p span.timestamp {
+	font-size: 0.6em;
+	text-align: right;
+}
+
+article.tileSystem {
+	margin: 30px auto 0 auto;
+}
+
+/* ########### Footer ############*/
+
+footer {
+	clear: all;
+	padding: 5% auto;
+	margin: 5% auto;
+	display: block;
+	z-index: 5;
+}
+
+footer p {
+	text-align: right;
+	padding-right: 3%;
+}
+
+/*************** Debug ***************/
+
+.debug {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  background-color: #ddd;
+  padding: 10px;
+  width: auto;
+  font-family: Menlo;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.pagination {
+  clear: both;
+  text-align: center;
+  padding: 1em;
+  color: #000;ursor: default; 
+}
+  .pagination a, .pagination span {
+    padding: 0.2em 0.3em; }
+  .pagination .disabled {
+    color: #aaaaaa; }
+  .pagination .current {
+    font-style: normal;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(250,38,9, 0.5);
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+ }
+  .pagination a {
+    text-decoration: none;
+    color: black; }
+    .pagination a:hover, .pagination a:focus {
+      text-decoration: underline; 
+
+  }
+
+
+div.alert-success {
+	color: rgba(103,126,42, 0.9);
+}
+
+/* ################ INDEX TILES ############## */
+
+.indexTile {
+	width: 20%;
+	position: relative;
+	display: inline;
+	float: left;
+	padding: 1%;
+	overflow: hidden;
+	text-align: center;
+	max-width: 1024px;
+
+}
+
+.indexTiles h1 {
+	font-size: 3em;
+	line-height: 1.5em;
+	border-bottom: 3px solid rgba(103,126,42, 0.5);
+	padding-left: 1%;
+}
+
+.indexTile li a {
+	text-decoration: none;
+	font-size: 1.2em;
+	color: rgba(103,126,42, 0.9);
+}
+
+.indexTile li a.deleteButton {
+	color: rgb(250,38,9);
+}
+
+/* ############## PROFILE PAGE ################ */
+
+.profileId {
+	padding-bottom: 3%;
+}
+
+.profileGravatar {
+	float: left;
+}
+
+.profileInfo {
+	margin-left: 12%;
+}
+
+.profileInfo h1 {
+	font-size: 2.2em;
+	line-height: 1.2em;
+	margin-bottom: 1%;
+}
+
+b {
+	font-weight: bold;
+}
+
+p {
+	margin-bottom: 2%;
+}
+
+.profileStats a {
+	text-decoration: none;
+	color: rgba(2,121,34,0.9);
+	font-weight: bold;
+}
+
+h1.profilePosts {
+	font-size: 1.5em;
+	padding-bottom: 1%;
+	border-bottom: 3px solid rgba(103,126,42, 0.5) ;
+}
+
+.profileTile {
+	display: block;
+	margin: 0 auto;
+}
+
+.profileTile div {
+	width: 25%;
+	display: inline;
+	float: left;
+	padding: 1%;
+	overflow: hidden;
+	font-size: 1.5em;
+}
+
+h1 span.articleTitle {
+	border-bottom: none;
+}
+
+.profileTile a {
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+.profileTile .readButton {
+	color: #677e2A;
+	font-size: 0.7em;
+}
+
+.profileTile .deleteButton {
+	color: rgba(250,38,9, 0.7);
+	font-size: 0.7em;
+}
+
+.profileTile ul li {
+	display: inline;
+}
+
+/* ############## ABOUT ############# */
+
+.aboutView div.aboutContent {
+	display: block;
+	margin: 0 auto;
+	max-width: 960px;
+	border-bottom: 3px solid rgba(103,126,42, 0.5);
+}
+
+
+
+.aboutView h2 {
+	font-size: 2em;
+	padding: 3% 0;
+}
+
+.aboutView p {
+	display: block;
+	margin: 0 auto;
+	font-size: 1.5em;
+	line-height: 1.8em;
+	padding-bottom: 2%;
+}
+
+.aboutView code {
+	font-family: Menlo, Courier, 'Courier new', monotype;
+}
+
+.profileInfo p a {
+	text-decoration: none;
+	color: rgba(103,126,42, 0.9);
+}
+
