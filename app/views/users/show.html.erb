@@ -1,23 +1,37 @@
 <% provide(:title, @user.name) %>
-<section><h1>
-	<%= gravatar_for @user %>
-	<%= @user.name %><h1> 
-	<p><%= @user.favourite_film %></p></section>
+<section class="profileId">
+	<div class="profileGravatar">
+	<%= gravatar_for(@user, size: 150) %>
+	<%= render 'follow_form' if signed_in? %>
+</div>
+<div class="profileInfo">
+	<h1><%= @user.name %></h1> 
+	<p class="favouriteFilm"><b>Favourite film:</b> <%= @user.favourite_film %></p>
+<div class="profileStats">
+<%= render 'shared/stats' %>
 
-	<section> <%= render 'shared/stats' %>
-	</section>
+
+</div>
+</div>
+
+</section>
+
+
 
 	<div class="posts">
-		<%= render 'follow_form' if signed_in? %>
+		
 		
 	<% if @user.posts.any? %>
-		<h1>Posts (<% @user.posts.count %>)</h1>
+	<h1 class="profilePostsHeader">Posts (<%= @user.posts.count %>)</h1>
+		
 
-		<ul>
+		
 			<%= render @posts %>
-		</ul>
+		
 
-		<%= will_paginate @posts %>
+		<div class="pagination">
+      <%= will_paginate @posts %>
+  </div>
 
 		<% end %>
 	</div>

@@ -1,22 +1,31 @@
-<div class="editForm">
+<% provide(:title, "edit user") %>
+
+<section class="editForm">
+  <h1 class="editNote">update your profile</h1>
+
+
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :name %>
+      <%= f.label :name, "Whatever you would like to be called from now on" %>
       <%= f.text_field :name %>
 
-      <%= f.label :email %>
+      <%= f.label :email, "Change your email address here. Or don't touch it." %>
       <%= f.text_field :email %>
 
-      <%= f.label :password %>
+      <%= f.label :favourite_film, "Type in your new favourite film here." %>
+      <%= f.text_field :favourite_film %>
+
+      <%= f.label :password, "If you don't want to change your password, just type in your current one here."%>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirm Password" %>
+      <%= f.label :password_confirmation, "And confirm it here" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Save changes", class: "editButton" %>
+      <%= f.submit "save changes", class: "button" %>
     <% end %>
 
     <%= gravatar_for(@user) %>
-    <a href="http://gravatar.com/emails">change</a>
-</div>
+    <p><a href="http://gravatar.com/emails" class="gravatarLink">change your gravatar</a> on the Wordpress site.</p>
+
+  </section>

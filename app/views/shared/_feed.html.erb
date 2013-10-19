@@ -1,6 +1,14 @@
+<div class="userReviewsFeed">
+	<h1>your posts</h1>
+
 <% if @feed_items.any? %>
-  <ol class="posts">
+  <ul>
+  	<li>
     <%= render partial: 'shared/feed_item', collection: @feed_items %>
-  </ol>
+</li>
+  <div class="pagination">
   <%= will_paginate @feed_items %>
+</div>
 <% end %>
+
+</div>

@@ -1,28 +1,67 @@
 
-
-
-	<h1>cinewise</h1>
-	<p>This is the home page for cinewise</p>
-
-	<!--<-%= link_to "sign up", signup_path, class: "signupButton" %> -->
 	
 	<% if signed_in? %>
-	<section>
-		<%= render 'shared/user_info' %>
-	</section>
 
-	<section>
-		<%= render 'shared/stats' %>
-	</section>
+	
 
-	<section>
-		<%= render 'shared/post_form' %>
-	</section>
+				<section class="dashboard">
+					<%= render 'shared/user_info' %>
 
-	<div>
-		<h1>Feed</h1>
-		<%= render 'shared/feed' %>
-	</div>
+					<%= render 'shared/stats' %>
+				<div class="postForm">	
+					<%= render 'shared/post_form' %>
+				</div>
+
+			</section>
+
+
+				
+
+				<section>
+					
+					<%= render 'shared/feed' %>
+				</section>
+
+					
+				
+			
+
+	<% else %>
+
+	
+<section class="signUpForm">
+<h1 class="signUpNote">join cinewise</h1>
+
+<%= form_for(@user) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+	<span>
+	<%= f.label :name, "Your preferred nomenclature. Otherwise known as \"name\"." %>
+	<%= f.text_field :name %>
+	</span>
+	<span>
+	<%= f.label :email, "So, they gave you a beeper. But you'd rather use your email here." %>
+	<%= f.text_field :email %>
+	</span>
+	<span>
+	<%= f.label :favourite_film, "Your favourite film. Hopefully you're a fan of Logjammin\'" %>
+	<%= f.text_field :favourite_film %>
+	</span>
+	<span>
+	<%= f.label :password, "Password. You need this. Make sure it's at least 6 characters long." %>
+	<%= f.password_field :password %>
+	</span>
+	<span>
+	<%= f.label :password_confirmation, "Confirm your password. Just in case you're not a nihilist." %>
+	<%= f.password_field :password_confirmation %>
+	</span>
+	<%= f.submit "let\'s go bowlin\'", class: "button" %>
+
+<% end %>
+
+<p>Already a member? <%= link_to "Sign in here", signin_path, class: "signinLink" %></p>
+</section>
+
+
 
 	<% end %>
 

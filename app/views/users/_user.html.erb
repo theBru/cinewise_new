@@ -1,6 +1,10 @@
-<li>
-  <%= gravatar_for user, size: 52 %>
-  <%= link_to user.name, user %>
+<section class="indexTile">
+  <%= gravatar_for user, size: 70, class: "indexTile" %>
+  <ul>
+  	<li>
+
+  <%= link_to user.name, user, class: "readButton" %>
   <% if current_user.admin? && !current_user?(user) %> | <%=link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
   <% end %>
-</li>
+</div>
+</section>
