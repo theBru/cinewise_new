@@ -1011,7 +1011,9 @@ h1 span.articleTitle {
 	border-bottom: 3px solid rgba(103,126,42, 0.5);
 }
 
-
+.aboutView p {
+	font-family: 'Oxygen', Arial, Helvetica, 'sans-serif';
+}
 
 .aboutView h2 {
 	font-size: 2em;
